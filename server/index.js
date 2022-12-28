@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const db = mysql.createPool({
     host: "project-database.chtzczkph8w4.us-east-1.rds.amazonaws.com",
+    // host :"localhost",
     user: "oussama",
     password:"password",
     database: "crudgames",
@@ -14,7 +15,7 @@ const db = mysql.createPool({
 server.use(express.json());
 server.use(cors());
 
-server.get("/:universalURL", (req, res) => {
+server.get("/", (req, res) => {
     res.send("404 URL NOT FOUND");
  });
 
